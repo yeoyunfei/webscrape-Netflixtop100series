@@ -11,8 +11,7 @@ link = "https://www.imdb.com/list/ls063868333/"
 #Creates a html document from a url
 page = read_html(link)
 
-#Taking the Title of the page
-
+#Extracting various details of the page
 name = page %>% html_nodes(".lister-item-header a") %>% html_text()
 
 year = page %>% html_nodes(".text-muted.unbold") %>% html_text()
